@@ -157,8 +157,8 @@ print("***PROBLEM 3.3 : COMBINING ALL LOGIC")
 let isRaining = true
 let isSunny = true
 var temp = 90
-let isNiceWeather = 82
-if (isNiceWeather >= 82) {
+let isNiceWeather = (!isRaining && isSunny && temp > 82)
+if (isNiceWeather) {
     print("I'm going for a walk!")
 }
 
@@ -175,3 +175,17 @@ print("***PROBLEM 3.4 : FINISHING THE FITNESS APP")
 
 //Once you complete the coding, test and run the code with various values for currentHR to see if all the coding works. If all the coding works, check your work and see if it shows in the console. Then you are done! Push it up to GitHub.
 print("\n")
+var currentHR = 90
+var targetHR = 100
+let isInTarget = currentHR == targetHR
+let isBelowTarger = currentHR < targetHR
+let isAboveTarget = currentHR > targetHR
+if (isInTarget){
+    print("You're right on track!")
+}
+else if ( isBelowTarger){
+    print("You're doing great, but try to push it a bit!")
+}
+if (isAboveTarget){
+    print("You're on fire! Slow it down just a bit.x")
+}
