@@ -136,7 +136,7 @@ print("***PROBLEM 3.2 : DINNER TIME")
 let hasFish = true
 let hasPizza = true
 let hasVegan = true
-if (hasFish || hasPizza || hasVegan) {
+if (hasFish || hasPizza && hasVegan) {
     print("Let's go!")
 }
 else {
