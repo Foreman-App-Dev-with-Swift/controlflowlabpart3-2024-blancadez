@@ -97,7 +97,12 @@ print("***PROBLEM 3.0 : FITNESS APP")
 // You want your fitness tracking app to give as much encouragement as possible to your users. Create a variable steps equal to the number of steps you guess you've taken today (already done for you). Create a constant stepGoal equal to 10,000 (already done for you). Write an if-else statement that will print "You're almost halfway there!" if steps is less than half of stepGoal, and will print "You're over halfway there!" if steps is greater than half of stepGoal.
 var steps = 400
 let stepGoal = 10000
-
+if (steps < stepGoal / 2) {
+    print("You're almost halfway there!")
+}
+else if (steps > stepGoal / 2) {
+    print("You're over halfway there!")
+}
 
 print("\n")
 print("***PROBLEM 3.1 : FITNESS APP")
@@ -106,7 +111,15 @@ print("***PROBLEM 3.1 : FITNESS APP")
 
 
 //Once you complete the coding, test "steps" with various numbers to see if all the coding works. Then continue.
-
+if (steps < stepGoal / 10) {
+    print("Way to get a good start today!")
+}
+else if (steps < stepGoal / 2) {
+    print("You're almost halfway there!")
+}
+if (steps > stepGoal / 2) {
+    print("You're over halfway there!")
+}
 print("\n")
 
 print("***PROBLEM 3.2 : DINNER TIME")
@@ -120,6 +133,15 @@ print("***PROBLEM 3.2 : DINNER TIME")
  HINT: Create three boolean constants of hasFish, hasPizza, & hasVegan that are true. Then write your if-else statements.
  */
 
+let hasFish = true
+let hasPizza = true
+let hasVegan = true
+if (hasFish || hasPizza && hasVegan) {
+    print("Let's go!")
+}
+else {
+    print("Sorry, we'll have to think of somewhere else.")
+}
 
 
 print("\n")
@@ -131,6 +153,14 @@ print("***PROBLEM 3.3 : COMBINING ALL LOGIC")
 
 
 //Once you complete the coding, test and run the code with various boolean conditions in the variables to see if all the coding works. Change true into false, use different degrees, etc. Then continue.
+
+let isRaining = true
+let isSunny = true
+var temp = 90
+let isNiceWeather = (!isRaining && isSunny && temp > 82)
+if (isNiceWeather) {
+    print("I'm going for a walk!")
+}
 
 print("\n")
 print("***PROBLEM 3.4 : FINISHING THE FITNESS APP")
@@ -145,3 +175,17 @@ print("***PROBLEM 3.4 : FINISHING THE FITNESS APP")
 
 //Once you complete the coding, test and run the code with various values for currentHR to see if all the coding works. If all the coding works, check your work and see if it shows in the console. Then you are done! Push it up to GitHub.
 print("\n")
+var currentHR = 90
+var targetHR = 100
+let isInTarget = currentHR == targetHR
+let isBelowTarger = currentHR < targetHR
+let isAboveTarget = currentHR > targetHR
+if (isInTarget){
+    print("You're right on track!")
+}
+else if ( isBelowTarger){
+    print("You're doing great, but try to push it a bit!")
+}
+if (isAboveTarget){
+    print("You're on fire! Slow it down just a bit.x")
+}
